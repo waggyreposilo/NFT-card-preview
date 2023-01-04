@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+    --primary-softblue: hsl(215, 51%, 70%);
+    --primary-cyan: hsl(178, 100%, 50%);
+    --neutral-mainBG: hsl(217, 54%, 11%);
+    --neutral-cardBG: hsl(216, 50%, 16%);
+    --neutral-line: hsl(215, 32%, 27%);
+    --neutral-white: hsl(0, 0%, 100%);
+}
+
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+body{
+    padding:3%;
+    margin:unset;
+    font-size:18px;
+    font-family:'Outfit',sans-serif;
+    background-color:var(--neutral-mainBG);
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    min-height:100vh;
+    overflow:hidden;
+}
+
+.container{
+    margin: 0 auto;
+    padding:1.5rem;
+    max-width:350px;
+    height:100%;
+    background-color: var(--neutral-cardBG);
+    display:flex;
+    flex-direction:column;
+    border-radius:12px;
+}
+
+.img-top{    
+    overflow:hidden;    
+    position:relative;
+}
+
+.img-top img{
+    display:block;
+    border-radius:0.8em;
+}
+
+.card-image{
+    height:100%;
+    width:100%;
+    
+}
+
+.img-overlay{
+    position:absolute;
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    background-color: hsla(178, 100%, 50%,0.5);
+    border-radius:0.8em;
+    display:none;
+}
+
+.img-overlay img{
+    position:absolute;
+    width:50px;
+    left:50%;
+    top:50%;
+    transform:translate(-45%,-50%);
+}
+
+.img-top:hover .img-overlay{
+    display:block;
+}
+
+.text{
+    padding:.5em;
+    color:var(--neutral-white);
+}
+
+.text h1{
+    font-weight:600;
+    font-size:1.3rem;
+}
+
+.flex{
+    padding-bottom:.4em;
+    display:flex;
+    justify-content:space-between;
+}
+
+.sblue{
+    color:var(--primary-softblue);
+}
+
+.ethereum{
+
+    text-transform:uppercase;
+    color:var(--primary-cyan);
+    font-weight: 500;
+}
+
+.ethereum img{
+    padding:0 .1em;
+}
+
+.days{
+    text-align:right;
+}
+
+.creation{
+    border-top: .1em solid var(--neutral-line);
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    padding-top:.9em;
+}
+
+.creation p{
+    margin:0.2em 0;
+}
+
+.creation img{
+    border: .1em solid var(--neutral-white);
+    border-radius: 50%;
+    width:10%;
+    height:10%;
+    margin-right:.3em;
+}
+.name{   
+    color:var(--neutral-white);
+}
+
+.name:hover, .text h1:hover{
+    color:var(--primary-cyan);
+}
